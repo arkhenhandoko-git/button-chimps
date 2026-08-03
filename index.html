@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Chimps — VR Game</title>
+<style>
+  :root {
+    --bg: #0d0b1a;
+    --bg2: #16122b;
+    --accent: #ffb347;
+    --accent2: #ff5e78;
+    --discord: #5865F2;
+    --text: #f4f1ff;
+    --muted: #b3accc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(circle at 20% 0%, #241a44 0%, var(--bg) 60%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  header {
+    text-align: center;
+    padding: 90px 24px 70px;
+    position: relative;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(255,179,71,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+  }
+  .tagline {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--muted);
+    max-width: 620px;
+    margin: 0 auto 40px;
+  }
+
+  /* BUTTONS */
+  .btn-row {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-3px); }
+  .btn-download {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #1a1130;
+    box-shadow: 0 10px 30px rgba(255,94,120,0.35);
+  }
+  .btn-discord {
+    background: var(--discord);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(88,101,242,0.35);
+  }
+
+  /* SECTIONS */
+  section { padding: 60px 0; }
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 16px;
+    font-weight: 800;
+  }
+  .lead { color: var(--muted); max-width: 680px; font-size: 1.1rem; }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .card {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 28px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .card .icon { font-size: 2rem; margin-bottom: 14px; }
+  .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 0.95rem; }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #241a44, #16122b);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 60px 30px;
+    margin: 40px 0 80px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <span class="badge">Virtual Reality</span>
+      <h1>Button Chimps</h1>
+      <p class="tagline">Strap in, go bananas. A chaotic VR party game where the only rule is: press the button.</p>
+      <div class="btn-row">
+        <a class="btn btn-download" href="https://smokeygt.itch.io/theemptyhall" target="_blank" rel="noopener">
+          🎮 Download the Beta
+        </a>
+        <a class="btn btn-discord" href="https://discord.gg/SPdxAhdCgx" target="_blank" rel="noopener">
+          💬 Join our Discord
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <h2>What is Button Chimps?</h2>
+    <p class="lead">Button Chimps is a virtual reality game built for laughs and mayhem. Reach out, grab, smash, and press your way through a world where every button does something — and nothing is quite what it seems.</p>
+
+    <div class="features">
+      <div class="card">
+        <div class="icon">🕶️</div>
+        <h3>Built for VR</h3>
+        <p>Full room-scale immersion. Use your hands to interact with everything around you.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🐵</div>
+        <h3>Go Full Chimp</h3>
+        <p>Embrace the chaos. Smash buttons, cause mischief, and see what happens.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🚧</div>
+        <h3>In Active Beta</h3>
+        <p>We're building this live. Play the beta now and help shape where it goes next.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta">
+      <h2>Ready to press some buttons?</h2>
+      <p class="lead" style="margin: 0 auto 30px;">Download the beta and jump into our community — we'd love your feedback.</p>
+      <div class="btn-row">
+        <a class="btn btn-download" href="https://smokeygt.itch.io/theemptyhall" target="_blank" rel="noopener">
+          🎮 Download the Beta
+        </a>
+        <a class="btn btn-discord" href="https://discord.gg/SPdxAhdCgx" target="_blank" rel="noopener">
+          💬 Join our Discord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Button Chimps — a VR game in development. © 2026. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
